@@ -31,7 +31,7 @@ export function SectionProceso() {
             Cómo trabajamos
           </h2>
           <p className="mt-4 text-gray-light">
-            Búsqueda, adquisición, operación y crecimiento. Un proceso claro y predecible para usted.
+            Búsqueda, adquisición, operación y crecimiento. Un proceso claro y predecible.
           </p>
         </div>
         <div className="mt-14 grid sm:grid-cols-2 lg:grid-cols-4 gap-8">

@@ -23,7 +23,7 @@ export function SectionNosotros() {
           <div className="grid grid-cols-2 gap-4">
             {[
               {
-                text: "Un solo negocio, todo nuestro foco",
+                text: "Un solo negocio, todo nuestro enfoque",
                 icon: (
                   <span className="w-8 h-8 flex-shrink-0 flex items-center justify-center text-primary font-semibold text-xl" aria-hidden>1</span>
                 ),

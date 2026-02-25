@@ -54,21 +54,31 @@ export function Footer() {
               </li>
             </ul>
           </div>
-          <div>
+<div>
             <p className="text-sm font-medium text-gray-light mb-4">Contacto</p>
-            <p className="text-sm text-white/80">México</p>
-            <a
-              href="mailto:pedro.garza@denia-capital.com"
-              className="text-sm text-white hover:text-gray-light transition-colors mt-1 inline-block"
-            >
-              pedro.garza@denia-capital.com         
-              </a>
+            <p className="text-sm text-white/80 mb-3">México</p>
+            <div className="flex flex-col gap-4">
+              <div className="flex flex-col gap-1">
+                <a
+                  href="mailto:pedro.garza@denia-capital.com"
+                  className="text-sm text-white hover:text-gray-light transition-colors"
+                >
+                  pedro.garza@denia-capital.com
+                </a>
+                <a
+                  href="mailto:pablo@denia-capital.com"
+                  className="text-sm text-white hover:text-gray-light transition-colors"
+                >
+                  pablo@denia-capital.com
+                </a>
+              </div>
               <a
-              href="mailto:pablo@denia-capital.com"
-              className="text-sm text-white hover:text-gray-light transition-colors mt-1 inline-block"
-            >
-              pablo@denia-capital.com         
+                href="tel:+525636040986"
+                className="text-sm text-white hover:text-gray-light transition-colors"
+              >
+                +52 56 3604 0986
               </a>
+            </div>
           </div>
           
         </div>

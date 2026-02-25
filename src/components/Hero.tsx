@@ -13,7 +13,7 @@ export function Hero() {
               Search Fund · México
             </p>
             <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl leading-tight text-white">
-              Para dueños de empresas que quieren vender o retirarse
+              Buscando empresarios que estén listos para vender y transicionar su empresa.
             </h1>
             <p className="mt-6 text-lg text-gray-light max-w-xl">
               Nuestra aspiración es continuar con tu legado: invertir, operar y hacer crecer
