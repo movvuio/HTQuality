@@ -19,7 +19,7 @@ const team = [
     " ",
     "Cuenta con amplia experiencia en manejo comercial de portafolios de clientes y coordinando equipos multifuncionales en áreas técnicas, financieras y comerciales para ejecutar estrategias complejas de expansión de mercado. De igual forma, cuenta con experiencia operativa en transacciones de inversión, incluyendo valoración de empresas y due diligence comercial.",
     " ",
-    "Pablo es Ingeniero Químico por la Universidad Nacional Autónoma de México y MBA por IESE Business School.",
+    "Pablo es MBA por IESE Business School e Ingeniero Químico por la Universidad Nacional Autónoma de México con estudios en Yonsei University of Seoul.",
   ],
     image: "/images/PHOTO-2025-11-30-21-12-57%202.jpg",
   },

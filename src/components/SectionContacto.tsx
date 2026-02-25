@@ -13,12 +13,6 @@ export function SectionContacto() {
           Deja un mensaje; respondemos con discreción y sin compromiso.
         </p>
         <div className="mt-10 flex flex-col items-center gap-6">
-          <a
-            href="mailto:contacto@deniacapital.com?subject=Consulta - Venta de empresa"
-            className="inline-flex items-center justify-center px-6 py-3 rounded bg-primary text-white font-medium hover:opacity-90 transition-opacity"
-          >
-            Quiero conocer opciones
-          </a>
           <div className="flex flex-col sm:flex-row gap-3 justify-center flex-wrap">
             <a
               href="mailto:pedro.garza@denia-capital.com"

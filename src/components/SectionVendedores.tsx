@@ -19,7 +19,7 @@ export function SectionVendedores() {
             <h3 className="text-navy font-medium text-sm uppercase tracking-wider text-center md:text-left">
               Industria
             </h3>
-            <p className="mt-3 text-gray-mid text-sm">
+            <p className="mt-3 text-gray-mid text-sm text-center md:text-left">
               Principales sectores de interés:
             </p>
             <ul className="mt-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
