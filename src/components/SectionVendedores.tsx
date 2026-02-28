@@ -31,7 +31,7 @@ export function SectionVendedores() {
                     <path d="M5 9v6M19 9v6M9 15h6" />
                   </svg>
                 </span>
-                <span className="mt-3 text-navy font-medium text-sm">Logística especializada</span>
+                <span className="mt-3 text-navy font-medium text-sm">Logística especializada y Movilidad</span>
               </li>
               <li className="flex flex-col items-center text-center">
                 <span className="flex items-center justify-center w-[72px] h-[72px] text-primary" aria-hidden>
@@ -44,17 +44,6 @@ export function SectionVendedores() {
                   </svg>
                 </span>
                 <span className="mt-3 text-navy font-medium text-sm">Química especializada</span>
-              </li>
-              <li className="flex flex-col items-center text-center">
-                <span className="flex items-center justify-center w-[72px] h-[72px] text-primary" aria-hidden>
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="w-9 h-9">
-                    <path d="M4 19.5A2.5 2.5 0 016.5 17H20" />
-                    <path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z" />
-                    <path d="M8 7h8" />
-                    <path d="M8 11h6" />
-                  </svg>
-                </span>
-                <span className="mt-3 text-navy font-medium text-sm">Educación</span>
               </li>
               <li className="flex flex-col items-center text-center">
                 <span className="flex items-center justify-center w-[72px] h-[72px] text-primary" aria-hidden>

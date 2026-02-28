@@ -1,13 +1,33 @@
 import Link from "next/link";
-import Image from "next/image";
 
 export function Hero() {
   return (
-    <section className="relative bg-navy text-white overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-transparent" />
-      <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-primary/10 to-transparent" />
+    <section className="relative bg-navy text-white overflow-hidden min-h-[32rem]">
+      {/* Video background */}
+      <video
+        autoPlay
+        muted
+        loop
+        playsInline
+        className="absolute inset-0 w-full h-full object-cover"
+        aria-hidden
+      >
+        <source src="/images/Denia%20Capital%20Hero%202%20slow%20Compressed%20.mp4" type="video/mp4" />
+      </video>
+      {/* Gradient overlay: navy blend so blue shows and text stays readable */}
+      <div
+        className="absolute inset-0 pointer-events-none"
+        style={{
+          background: `
+            linear-gradient(to right, #072535 0%, #072535 35%, rgba(7,37,53,0.85) 55%, rgba(7,37,53,0.4) 80%, transparent 100%),
+            linear-gradient(to bottom, rgba(7,37,53,0.5) 0%, transparent 40%, transparent 60%, rgba(7,37,53,0.6) 100%),
+            linear-gradient(135deg, #072535 0%, transparent 50%)
+          `,
+        }}
+      />
+      <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent pointer-events-none" />
       <div className="relative max-w-6xl mx-auto px-4 sm:px-6 py-20 lg:py-28">
-        <div className="grid lg:grid-cols-[1fr_1.25fr] gap-12 lg:gap-16 items-center">
+        <div className="grid lg:grid-cols-1 gap-12 lg:gap-16 items-center">
           <div className="max-w-2xl">
             <p className="text-gray-light text-sm font-medium uppercase tracking-wider mb-4">
               Search Fund · México
@@ -27,28 +47,6 @@ export function Hero() {
                 Iniciar conversación
               </Link>
             </div>
-          </div>
-          <div className="relative hidden lg:block aspect-[4/3] rounded-lg overflow-hidden shadow-2xl">
-            <Image
-              src="/images/24-Denia.jpg"
-              alt="Denia — Vista de la costa y la ciudad"
-              fill
-              className="object-cover"
-              sizes="(max-width: 1024px) 0px, 50vw"
-              priority
-            />
-            {/* Gradient overlay so edges blend into navy background */}
-            <div
-              className="absolute inset-0 rounded-lg pointer-events-none"
-              style={{
-                background: `
-                  linear-gradient(to right, #072535 0%, transparent 25%),
-                  linear-gradient(to left, #072535 0%, transparent 20%),
-                  linear-gradient(to bottom, #072535 0%, transparent 25%),
-                  linear-gradient(to top, #072535 0%, transparent 15%)
-                `,
-              }}
-            />
           </div>
         </div>
       </div>
