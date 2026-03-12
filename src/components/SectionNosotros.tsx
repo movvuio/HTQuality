@@ -9,7 +9,7 @@ export function SectionNosotros() {
               Un solo objetivo: adquirir una empresa y dedicarnos a operarla
             </h2>
             <p className="mt-6 text-gray-mid leading-relaxed">
-              Denia Capital es un Search Fund en México. No somos un fondo de capital privado y no manejamos un portafolio:
+              Denia Capital es un vehículo de inversión privada en México. No somos un fondo de capital privado y no manejamos un portafolio:
               buscamos adquirir una única compañía, tomar una participación mayoritaria y
               dedicarle tiempo completo para hacerla crecer sobre la base que se ha construido.
             </p>
