@@ -15,9 +15,9 @@ const team = [
     name: "Pablo Lecuona",
     role: "Fundador",
     bio: [
-    "Pablo Lecuona es un ejecutivo de desarrollo comercial y operaciones B2B con trayectoria internacional en la industria de químicos especializados, liderando cuentas clave, redes de distribuidores e iniciativas de expansión regional en México y América Latina.",
+    "Pablo Lecuona es un ejecutivo de desarrollo comercial y operaciones corporativas con trayectoria internacional liderando cuentas globales de clientess, redes de distribuidores e iniciativas de expansión regional en México y América Latina.",
     " ",
-    "Cuenta con amplia experiencia en manejo comercial de portafolios de clientes y coordinando equipos multifuncionales en áreas técnicas, financieras y comerciales para ejecutar estrategias complejas de expansión de mercado. De igual forma, cuenta con experiencia operativa en transacciones de inversión, incluyendo valoración de empresas y due diligence comercial.",
+    "Cuenta con amplia experiencia en ventas corporativas, desarolllo de negocios y coordinación de equipos multifuncionales en áreas técnicas, financieras y comerciales para ejecutar estrategias complejas de expansión de mercado. De igual forma, cuenta con experiencia operativa en transacciones de inversión, incluyendo valoración de empresas y due diligence comercial.",
     " ",
     "Pablo es MBA por IESE Business School e Ingeniero Químico por la Universidad Nacional Autónoma de México con estudios en Yonsei University of Seoul.",
   ],
