@@ -1,37 +1,20 @@
-const steps = [
-  {
-    step: "01",
-    title: "Búsqueda y filtrado",
-    text: "Identificamos empresas que encajan con nuestros criterios: rentabilidad, equipo y potencial de crecimiento.",
-  },
-  {
-    step: "02",
-    title: "Acercamiento y confidencialidad",
-    text: "Contacto discreto con propietarios que han expresado interés en una transición. Respeto total a la confidencialidad.",
-  },
-  {
-    step: "03",
-    title: "Due diligence y valoración",
-    text: "Análisis financiero, operativo y legal. Propuesta de valoración y estructura alineada con sus objetivos.",
-  },
-  {
-    step: "04",
-    title: "Cierre y operación",
-    text: "Negociación clara, cierre ordenado. Nos incorporamos a la compañía de tiempo completo para operarla y hacerla crecer.",
-  },
-];
+"use client";
+
+import { useLocale } from "@/context/LocaleContext";
 
 export function SectionProceso() {
+  const { t } = useLocale();
+  const steps = t.procesoSteps;
   return (
     <section id="proceso" className="py-16 lg:py-24 bg-navy text-white">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 flex flex-col items-center">
         <div className="text-center max-w-2xl">
-          <p className="text-accent text-sm font-medium uppercase tracking-wider">Proceso</p>
+          <p className="text-accent text-sm font-medium uppercase tracking-wider">{t.procesoLabel}</p>
           <h2 className="mt-2 font-serif text-3xl lg:text-4xl text-white">
-            Cómo trabajamos
+            {t.procesoTitle}
           </h2>
           <p className="mt-4 text-gray-light">
-            Búsqueda, adquisición, operación y crecimiento. Un proceso claro y predecible.
+            {t.procesoIntro}
           </p>
         </div>
         <div className="mt-14 w-full grid sm:grid-cols-2 lg:grid-cols-4 gap-8">

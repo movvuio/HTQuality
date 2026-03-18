@@ -1,7 +1,11 @@
+"use client";
+
 import Link from "next/link";
+import { useLocale } from "@/context/LocaleContext";
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
+  const { t } = useLocale();
 
   return (
     <footer className="bg-navy text-white">
@@ -16,47 +20,47 @@ export function Footer() {
               />
             </Link>
             <p className="mt-2 text-sm text-gray-light/80 max-w-xs">
-              Buscando seguir el legado de una gran empresa en México.
+              {t.footerTagline}
             </p>
           </div>
           <div>
-            <p className="text-sm font-medium text-gray-light mb-4">Enlaces</p>
+            <p className="text-sm font-medium text-gray-light mb-4">{t.footerLinks}</p>
             <ul className="space-y-2">
               <li>
                 <Link href="#nosotros" className="text-sm text-white/80 hover:text-white transition-colors">
-                  Nosotros
+                  {t.nav.nosotros}
                 </Link>
               </li>
               <li>
                 <Link href="#vendedores" className="text-sm text-white/80 hover:text-white transition-colors">
-                  Qué buscamos
+                  {t.nav.queBuscamos}
                 </Link>
               </li>
               <li>
                 <Link href="#proceso" className="text-sm text-white/80 hover:text-white transition-colors">
-                  Proceso
+                  {t.nav.proceso}
                 </Link>
               </li>
               <li>
                 <Link href="#equipo" className="text-sm text-white/80 hover:text-white transition-colors">
-                  Equipo
+                  {t.nav.equipo}
                 </Link>
               </li>
               <li>
                 <Link href="#modelo" className="text-sm text-white/80 hover:text-white transition-colors">
-                  Respaldo
+                  {t.nav.respaldo}
                 </Link>
               </li>
               <li>
                 <Link href="#contacto" className="text-sm text-white/80 hover:text-white transition-colors">
-                  Contacto
+                  {t.nav.contacto}
                 </Link>
               </li>
             </ul>
           </div>
-<div>
-            <p className="text-sm font-medium text-gray-light mb-4">Contacto</p>
-            <p className="text-sm text-white/80 mb-3">México</p>
+          <div>
+            <p className="text-sm font-medium text-gray-light mb-4">{t.footerContact}</p>
+            <p className="text-sm text-white/80 mb-3">{t.footerMexico}</p>
             <div className="flex flex-col gap-4">
               <div className="flex flex-col gap-1">
                 <a
@@ -83,7 +87,7 @@ export function Footer() {
           
         </div>
         <div className="mt-12 pt-8 border-t border-white/10 text-center text-sm text-white/60">
-          © {currentYear} Denia Capital Partners. Todos los derechos reservados.
+          © {currentYear} Denia Capital Partners. {t.footerRights}
         </div>
       </div>
     </footer>

@@ -1,16 +1,18 @@
 "use client";
 
+import { useLocale } from "@/context/LocaleContext";
+
 export function SectionContacto() {
+  const { t } = useLocale();
   return (
     <section id="contacto" className="py-16 lg:py-24 bg-white border-t border-gray-light">
       <div className="max-w-3xl mx-auto px-4 sm:px-6 text-center">
-        <p className="text-primary text-sm font-medium uppercase tracking-wider">Contacto</p>
+        <p className="text-primary text-sm font-medium uppercase tracking-wider">{t.contactoLabel}</p>
         <h2 className="mt-2 font-serif text-3xl lg:text-4xl text-navy">
-          Contacto
+          {t.contactoTitle}
         </h2>
         <p className="mt-4 text-gray-mid">
-          ¿Estás pensando en vender tu negocio o conoce alguna empresa donde podamos sumar valor?
-          Deja un mensaje; respondemos con discreción y sin compromiso.
+          {t.contactoIntro}
         </p>
         <div className="mt-10 flex flex-col items-center gap-6">
           <div className="flex flex-col sm:flex-row gap-3 justify-center flex-wrap">
@@ -29,7 +31,7 @@ export function SectionContacto() {
           </div>
         </div>
         <p className="mt-8 text-sm text-gray-mid">
-          Respondemos a todas las consultas de forma confidencial.
+          {t.contactoConfidential}
         </p>
       </div>
     </section>

@@ -1,6 +1,10 @@
+"use client";
+
 import Link from "next/link";
+import { useLocale } from "@/context/LocaleContext";
 
 export function Hero() {
+  const { t } = useLocale();
   return (
     <section className="relative bg-navy text-white overflow-hidden min-h-[32rem]">
       {/* Video background */}
@@ -30,21 +34,20 @@ export function Hero() {
         <div className="grid lg:grid-cols-1 gap-12 lg:gap-16 items-center">
           <div className="max-w-2xl">
             <p className="text-gray-light text-sm font-medium uppercase tracking-wider mb-4">
-              Inversión Privada · México
+              {t.heroTagline}
             </p>
             <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl leading-tight text-white">
-            Buscando empresas consolidadas y de alto potencial que estén listas para una transición estratégica
+              {t.heroTitle}
             </h1>
             <p className="mt-6 text-lg text-gray-light max-w-xl">
-              Nuestra aspiración es continuar con tu legado: invertir, operar y hacer crecer
-              la compañía que has construido, respetando su cultura y maximizando su potencial a largo plazo.
+              {t.heroSubtitle}
             </p>
             <div className="mt-10 flex flex-wrap gap-4">
               <Link
                 href="#contacto"
                 className="inline-flex items-center px-6 py-3 rounded bg-primary text-white font-medium hover:opacity-90 transition-opacity"
               >
-                Iniciar conversación
+                {t.ctaStartConversation}
               </Link>
             </div>
           </div>

@@ -2,18 +2,20 @@
 
 import Link from "next/link";
 import { useState } from "react";
+import { useLocale } from "@/context/LocaleContext";
 
 const navItems = [
-  { label: "Nosotros", href: "#nosotros" },
-  { label: "Qué buscamos", href: "#vendedores" },
-  { label: "Proceso", href: "#proceso" },
-  { label: "Equipo", href: "#equipo" },
-  { label: "Respaldo", href: "#modelo" },
-  { label: "Contacto", href: "#contacto" },
+  { key: "nosotros" as const, href: "#nosotros" },
+  { key: "queBuscamos" as const, href: "#vendedores" },
+  { key: "proceso" as const, href: "#proceso" },
+  { key: "equipo" as const, href: "#equipo" },
+  { key: "respaldo" as const, href: "#modelo" },
+  { key: "contacto" as const, href: "#contacto" },
 ];
 
 export function Header() {
   const [open, setOpen] = useState(false);
+  const { locale, setLocale, t } = useLocale();
 
   return (
     <header className="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-gray-light">
@@ -41,14 +43,36 @@ export function Header() {
               href={item.href}
               className="text-sm font-medium text-gray-mid hover:text-primary transition-colors"
             >
-              {item.label}
+              {t.nav[item.key]}
             </Link>
           ))}
+          <div className="flex items-center gap-2">
+            <button
+              type="button"
+              onClick={() => setLocale("es")}
+              className={`px-2 py-1 text-xs font-medium transition-colors ${
+                locale === "es" ? "text-primary" : "text-gray-mid hover:text-primary"
+              }`}
+              aria-label="Español"
+            >
+              ES
+            </button>
+            <button
+              type="button"
+              onClick={() => setLocale("en")}
+              className={`px-2 py-1 text-xs font-medium transition-colors ${
+                locale === "en" ? "text-primary" : "text-gray-mid hover:text-primary"
+              }`}
+              aria-label="English"
+            >
+              EN
+            </button>
+          </div>
           <Link
             href="#contacto"
             className="ml-2 px-4 py-2 rounded bg-primary text-white text-sm font-medium hover:opacity-90 transition-opacity"
           >
-            Iniciar conversación
+            {t.ctaStartConversation}
           </Link>
         </nav>
 
@@ -56,7 +80,7 @@ export function Header() {
           type="button"
           className="md:hidden p-2 text-navy"
           onClick={() => setOpen(!open)}
-          aria-label="Abrir menú"
+          aria-label={t.ariaOpenMenu}
         >
           <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             {open ? (
@@ -77,15 +101,35 @@ export function Header() {
               className="text-gray-mid hover:text-primary"
               onClick={() => setOpen(false)}
             >
-              {item.label}
+              {t.nav[item.key]}
             </Link>
           ))}
+          <div className="flex gap-2 mt-2">
+            <button
+              type="button"
+              onClick={() => setLocale("es")}
+              className={`flex-1 py-2 text-sm font-medium transition-colors ${
+                locale === "es" ? "text-primary" : "text-gray-mid"
+              }`}
+            >
+              ES
+            </button>
+            <button
+              type="button"
+              onClick={() => setLocale("en")}
+              className={`flex-1 py-2 text-sm font-medium transition-colors ${
+                locale === "en" ? "text-primary" : "text-gray-mid"
+              }`}
+            >
+              EN
+            </button>
+          </div>
           <Link
             href="#contacto"
             className="mt-2 py-2 text-center rounded bg-primary text-white font-medium"
             onClick={() => setOpen(false)}
           >
-            Iniciar conversación
+            {t.ctaStartConversation}
           </Link>
         </div>
       )}

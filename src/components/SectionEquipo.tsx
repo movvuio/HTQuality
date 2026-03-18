@@ -1,51 +1,38 @@
-const team = [
-  {
-    name: "Pedro Garza",
-    role: "Managing Partner",
-    bio: [
-      "Pedro Garza es un ejecutivo de estrategia y finanzas con amplia experiencia nacional e internacional liderando análisis y planificación financiera a gran escala, optimización de costos y oparaciones en México, América Latina y Estados Unidos.",
-      " ",
-      "Cuenta con amplia trayectoria profesional en diferentes compañías y como empresario, desde consultoría estratégica y en compañias internacionales, gestionando presupuestos multinacionales y apoyando a la toma de decisiones a nivel ejecutivo para la alta dirección, junta directiva e inversionistas.",
-      " ",
-      "Pedro es MBA por IESE Business School y Licenciado en Finanzas por la Universidad Panamericana, cuenta con una especialidad en Finanzas por IE Business School y cursos ejecutivos de Estrategia y Liderazgo por Harvard Business School.",
-    ],
-    image: "/images/Photo%20Pedro%20Garza%20(1).jpg",
-  },
-  {
-    name: "Pablo Lecuona",
-    role: "Managing Partner",
-    bio: [
-    "Pablo Lecuona es un ejecutivo de desarrollo comercial y operaciones corporativas con trayectoria internacional liderando cuentas globales de clientess, redes de distribuidores e iniciativas de expansión regional en México y América Latina.",
-    " ",
-    "Cuenta con amplia experiencia en ventas corporativas, desarolllo de negocios y coordinación de equipos multifuncionales en áreas técnicas, financieras y comerciales para ejecutar estrategias complejas de expansión de mercado. De igual forma, cuenta con experiencia operativa en transacciones de inversión, incluyendo valoración de empresas y due diligence comercial.",
-    " ",
-    "Pablo es MBA por IESE Business School e Ingeniero Químico por la Universidad Nacional Autónoma de México con estudios en Yonsei University of Seoul.",
-  ],
-    image: "/images/PHOTO-2025-11-30-21-12-57%202.jpg",
-  },
+"use client";
+
+import { useLocale } from "@/context/LocaleContext";
+
+const teamImages = [
+  "/images/Photo%20Pedro%20Garza%20(1).jpg",
+  "/images/PHOTO-2025-11-30-21-12-57%202.jpg",
 ];
 
 export function SectionEquipo() {
+  const { t } = useLocale();
+  const team = [
+    { name: "Pedro Garza", bio: t.equipoPedroBio, image: teamImages[0] },
+    { name: "Pablo Lecuona", bio: t.equipoPabloBio, image: teamImages[1] },
+  ];
   return (
     <section id="equipo" className="py-16 lg:py-24 bg-white border-t border-gray-light">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         <div className="text-center">
-          <p className="text-primary text-sm font-medium uppercase tracking-wider">Equipo</p>
+          <p className="text-primary text-sm font-medium uppercase tracking-wider">{t.equipoLabel}</p>
           <h2 className="mt-2 font-serif text-3xl lg:text-4xl text-navy">
-            Quiénes somos
+            {t.equipoTitle}
           </h2>
           <p className="mt-4 text-gray-mid max-w-2xl mx-auto text-justify">
-          Denia Capital fue fundado por Pedro Garza y Pablo Lecuona con el objetivo de identificar empresas con potencial de crecimiento en las que invertir. Ambos cuentan con amplia experiencia profesional en diversas compañías Fortune 500, así como trayectoria empresarial, tanto en México como a nivel internacional.
+            {t.equipoIntro1}
           </p>
           <p className="mt-4 text-gray-mid max-w-2xl mx-auto text-justify">
-            Adicionalmente Denia Capital cuenta con el respaldo de un grupo de inversionistas experimentados conformado por empresarios, inversionistas y ejecutivos con una amplia trayectoria.
+            {t.equipoIntro2}
           </p>
         </div>
         <div className="mt-12 flex flex-wrap justify-center gap-8 lg:gap-12">
           {team.map((person, i) => (
             <div key={i} className="flex flex-col items-center text-center w-full sm:w-auto sm:min-w-[200px]">
               <div className="aspect-square w-[200px] rounded-lg overflow-hidden bg-gray-light/50 flex items-center justify-center text-navy/40 text-5xl font-serif">
-                {"image" in person && person.image ? (
+                {person.image ? (
                   <img
                     src={person.image}
                     alt={person.name}
@@ -56,11 +43,11 @@ export function SectionEquipo() {
                 )}
               </div>
               <h3 className="mt-4 font-serif text-lg text-navy">{person.name}</h3>
-              <p className="text-sm font-medium text-primary">{person.role}</p>
+              <p className="text-sm font-medium text-primary">{t.equipoRole}</p>
               <div className="mt-2 text-sm text-gray-mid max-w-xs space-y-8 text-justify">
-                {Array.isArray(person.bio)
-                  ? person.bio.map((para, j) => <p key={j}>{para}</p>)
-                  : <p>{person.bio}</p>}
+                {person.bio.map((para, j) => (
+                  <p key={j}>{para}</p>
+                ))}
               </div>
             </div>
           ))}
