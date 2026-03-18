@@ -3,7 +3,7 @@ export const translations = {
     // Hero
     heroTagline: "Inversión Privada · México",
     heroTitle:
-      "Buscando empresas consolidadas y de alto potencial que estén listas para una transición estratégica",
+      "Buscando empresas consolidadas y de alto potencial listas para una transición estratégica",
     heroSubtitle:
       "Nuestra aspiración es continuar con tu legado: invertir, operar y hacer crecer la compañía que has construido, respetando su cultura y maximizando su potencial a largo plazo.",
     ctaStartConversation: "Iniciar conversación",
