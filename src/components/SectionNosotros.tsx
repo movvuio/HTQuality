@@ -8,13 +8,13 @@ export function SectionNosotros() {
             <h2 className="mt-2 font-serif text-3xl lg:text-4xl text-navy">
               Un solo objetivo: adquirir una empresa y dedicarnos a operarla
             </h2>
-            <p className="mt-6 text-gray-mid leading-relaxed">
+            <p className="mt-6 text-gray-mid leading-relaxed text-justify">
               Denia Capital es un vehículo de inversión privada en México. No somos un fondo de capital privado y no manejamos un portafolio:
               buscamos adquirir una única compañía, tomar una participación mayoritaria y
               dedicarle tiempo completo para hacerla crecer sobre la base que se ha construido.
             </p>
-            <p className="mt-4 text-gray-mid leading-relaxed">
-              Buscamos ofrecer una alternativa de salida atractiva y confiable para el fundador,
+            <p className="mt-4 text-gray-mid leading-relaxed text-justify">
+              Ofrecemos una alternativa de salida atractiva y confiable para el fundador,
               mediante una transición ordenada y planeada que respete el modelo de negocio,
               empleados, clientes y proveedores. Incorporándonos a la compañía de tiempo
               completo al frente del equipo directivo.

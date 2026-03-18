@@ -18,9 +18,9 @@ const instrumentSerif = Instrument_Serif({
 });
 
 export const metadata: Metadata = {
-  title: "Denia Capital Partners | Search Fund México",
+  title: "Denia Capital Partners | México",
   description:
-    "Search Fund en México. Continuar con tu legado: invertir, operar y hacer crecer la compañía que has construido. Transición ordenada, cultura preservada, visión de largo plazo.",
+    "Buscanmos seguir el legado de una gran empresa en México",
   icons: {
     icon: "/icon.png",
     apple: "/icon.png",

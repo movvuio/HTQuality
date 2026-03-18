@@ -16,7 +16,7 @@ export function Footer() {
               />
             </Link>
             <p className="mt-2 text-sm text-gray-light/80 max-w-xs">
-              Search Fund en México. Buscamos a dueños que quieran vender o retirarse.
+              Buscando seguir el legado de una gran empresa en México.
             </p>
           </div>
           <div>

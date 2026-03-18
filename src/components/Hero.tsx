@@ -30,10 +30,10 @@ export function Hero() {
         <div className="grid lg:grid-cols-1 gap-12 lg:gap-16 items-center">
           <div className="max-w-2xl">
             <p className="text-gray-light text-sm font-medium uppercase tracking-wider mb-4">
-              Search Fund · México
+              Inversión Privada · México
             </p>
             <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl leading-tight text-white">
-              Buscando empresarios que estén listos para vender y transicionar su empresa.
+            Buscando empresas consolidadas y de alto potencial que estén listas para una transición estratégica
             </h1>
             <p className="mt-6 text-lg text-gray-light max-w-xl">
               Nuestra aspiración es continuar con tu legado: invertir, operar y hacer crecer

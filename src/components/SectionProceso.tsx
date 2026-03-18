@@ -24,8 +24,8 @@ const steps = [
 export function SectionProceso() {
   return (
     <section id="proceso" className="py-16 lg:py-24 bg-navy text-white">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6">
-        <div className="text-center max-w-2xl mx-auto">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 flex flex-col items-center">
+        <div className="text-center max-w-2xl">
           <p className="text-accent text-sm font-medium uppercase tracking-wider">Proceso</p>
           <h2 className="mt-2 font-serif text-3xl lg:text-4xl text-white">
             Cómo trabajamos
@@ -34,7 +34,7 @@ export function SectionProceso() {
             Búsqueda, adquisición, operación y crecimiento. Un proceso claro y predecible.
           </p>
         </div>
-        <div className="mt-14 grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="mt-14 w-full grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {steps.map(({ step, title, text }) => (
             <div key={step} className="relative">
               <p className="text-white font-mono text-sm">{step}</p>

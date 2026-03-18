@@ -1,11 +1,11 @@
 const team = [
   {
     name: "Pedro Garza",
-    role: "Fundador",
+    role: "Managing Partner",
     bio: [
-      "Pedro Garza es un ejecutivo de estrategia y operaciones con amplia experiencia nacional e internacional liderando análisis y planificación financiera a gran escala, optimización de costos y oparaciones en México, América Latina y Estados Unidos.",
+      "Pedro Garza es un ejecutivo de estrategia y finanzas con amplia experiencia nacional e internacional liderando análisis y planificación financiera a gran escala, optimización de costos y oparaciones en México, América Latina y Estados Unidos.",
       " ",
-      "Cuenta con amplia trayectoria profesional en diferentes compañías y como emprendedor, desde consultoría estratégica y en compañias como Dell, Uber y Uber Freight, gestionando presupuestos multinacionales y apoyando a la toma de decisiones a nivel ejecutivo para la alta dirección, junta directiva e inversionistas.",
+      "Cuenta con amplia trayectoria profesional en diferentes compañías y como empresario, desde consultoría estratégica y en compañias internacionales, gestionando presupuestos multinacionales y apoyando a la toma de decisiones a nivel ejecutivo para la alta dirección, junta directiva e inversionistas.",
       " ",
       "Pedro es MBA por IESE Business School y Licenciado en Finanzas por la Universidad Panamericana, cuenta con una especialidad en Finanzas por IE Business School y cursos ejecutivos de Estrategia y Liderazgo por Harvard Business School.",
     ],
@@ -13,7 +13,7 @@ const team = [
   },
   {
     name: "Pablo Lecuona",
-    role: "Fundador",
+    role: "Managing Partner",
     bio: [
     "Pablo Lecuona es un ejecutivo de desarrollo comercial y operaciones corporativas con trayectoria internacional liderando cuentas globales de clientess, redes de distribuidores e iniciativas de expansión regional en México y América Latina.",
     " ",
@@ -34,11 +34,11 @@ export function SectionEquipo() {
           <h2 className="mt-2 font-serif text-3xl lg:text-4xl text-navy">
             Quiénes somos
           </h2>
-          <p className="mt-4 text-gray-mid max-w-full">
-            Denia Capital fue fundado por Pedro Garza y Pablo Lecuona con un sueño de encontrar una empresa para invertir y continuar con su potencial. Ambos cuentan con una amplia experiencia en diferentes industrias tanto en México cómo internacionalmente.
+          <p className="mt-4 text-gray-mid max-w-2xl mx-auto text-justify">
+          Denia Capital fue fundado por Pedro Garza y Pablo Lecuona con el objetivo de identificar empresas con potencial de crecimiento en las que invertir. Ambos cuentan con amplia experiencia profesional en diversas compañías Fortune 500, así como trayectoria empresarial, tanto en México como a nivel internacional.
           </p>
-          <p className="mt-4 text-gray-mid max-w-full">
-            Adicionalmente Denia Capital cuenta con el respaldo de un grupo de inversionistas experimentados conformado por empresarios, inversionistas y ejecutivos con una amplia trayectoria en México y en todo el mundo.
+          <p className="mt-4 text-gray-mid max-w-2xl mx-auto text-justify">
+            Adicionalmente Denia Capital cuenta con el respaldo de un grupo de inversionistas experimentados conformado por empresarios, inversionistas y ejecutivos con una amplia trayectoria.
           </p>
         </div>
         <div className="mt-12 flex flex-wrap justify-center gap-8 lg:gap-12">
