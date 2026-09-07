@@ -1,260 +1,375 @@
 export const translations = {
   es: {
-    // Hero
-    heroTagline: "Inversión Privada · México",
-    heroTitle:
-      "Buscando empresas consolidadas y de alto potencial listas para una transición estratégica",
+    heroTitleLine1: "Importación de líneas de producción y equipos",
+    heroTitleAccent: "desde el origen hasta México",
     heroSubtitle:
-      "Nuestra aspiración es continuar con tu legado: invertir, operar y hacer crecer la compañía que has construido, respetando su cultura y maximizando su potencial a largo plazo.",
-    ctaStartConversation: "Iniciar conversación",
+      "Comercializadora con 24 años de trayectoria en la gestión de actividades de comercio exterior. Coordinamos importaciones de maquinaria, materiales y equipos especializados con estándares de excelencia operativa.",
+    ctaStartConversation: "Solicitar asesoría",
+    ctaExploreServices: "Conocer servicios",
+    ctaContactNow: "Ponerse en contacto",
+    heroScrollLabel: "Desplazarse hacia abajo",
 
-    // Header
     nav: {
       nosotros: "Nosotros",
-      queBuscamos: "Enfoque",
+      servicios: "Servicios",
       proceso: "Proceso",
-      equipo: "Equipo",
-      respaldo: "Respaldo",
+      valor: "Por qué HTQ",
       contacto: "Contacto",
     },
     ariaOpenMenu: "Abrir menú",
 
-    // SectionNosotros
     nosotrosLabel: "Nosotros",
-    nosotrosTitle: "Un solo objetivo: adquirir una empresa y dedicarnos a operarla",
+    nosotrosTitle: "Apoyo a empresas en sus operaciones de comercio exterior",
     nosotrosP1:
-      "Denia Capital es un vehículo de inversión privada en México. No somos un fondo de capital privado y no manejamos un portafolio: buscamos adquirir una única compañía, tomar una participación mayoritaria y dedicarle tiempo completo para hacerla crecer sobre la base que se ha construido.",
+      "HT Quality es una comercializadora con 24 años de trayectoria en la gestión de actividades de comercio exterior para sus clientes. Iniciamos nuestra actividad apoyando a empresas industriales en exportaciones hacia China y Asia.",
     nosotrosP2:
-      "Ofrecemos una alternativa de salida atractiva y confiable para el fundador, mediante una transición ordenada y planeada que respete el modelo de negocio, empleados, clientes y proveedores. Incorporándonos a la compañía de tiempo completo al frente del equipo directivo.",
+      "En los últimos 12 años hemos establecido alianzas comerciales con empresas mexicanas líderes en sus sectores, optimizando sus operaciones de comercio exterior y permitiéndoles concentrarse en su actividad principal. En la actualidad, continuamos brindando apoyo a empresas de diversas industrias que requieren nuestra experiencia en la gestión de importaciones y exportaciones de mercancías, materiales y equipos.",
     nosotrosCards: [
-      "Un solo negocio, todo nuestro enfoque",
-      "Transición ordenada, cultura preservada",
-      "Capital comprometido, listo para ejecutar",
-      "Operación activa, visión de largo plazo",
+      "24 años de experiencia en comercio exterior",
+      "Alianzas con empresas líderes en México",
+      "Importación CIF de principio a fin",
+      "Enfoque en que usted concentre su actividad en su negocio",
     ],
 
-    // SectionVendedores
-    vendedoresLabel: "Enfoque",
-    vendedoresTitle: "Perfil de la Empresa",
+    vendedoresLabel: "Servicios",
+    vendedoresTitle: "Gestión integral de importación",
     vendedoresIntro:
-      "Buscamos compañías que sean referentes en su industria o localidad, con historia de éxito y espacio para crecer con capital y gestión dedicada.",
-    vendedoresBusinessTitle: "El negocio",
-    vendedoresBusinessItems: [
-      "Ventas anuales > 200 millones de pesos MXN",
-      "Rentabilidad demostrada - EBITDA > 15%",
-      "Base de clientes o ingresos recurrentes",
-      "Sector con tendencias positivas de crecimiento",
-      "Bajas necesidades de Gastos de Capital (CAPEX)",
-      "Equipo operativo que pueda continuar",
-    ],
-    vendedoresOwnerTitle: "El dueño",
-    vendedoresOwnerItems: [
-      "Abierto a una transición de control",
-      "Que le importe el futuro del negocio y de su gente",
-      "Con motivaciones claras para vender",
-      "Alineado con nuestros valores de integridad y respeto",
+      "Asesoría estratégica de inicio a fin del proyecto, orientada a garantizar un proceso eficiente, ordenado y libre de contratiempos.",
+    serviciosPillars: [
+      {
+        id: "logistica",
+        title: "Logística",
+        description:
+          "Coordinamos el movimiento de la carga desde la fábrica y el puerto de origen hasta la entrega en sitio del cliente, con trazabilidad documentada en cada etapa.",
+        items: [
+          "Transporte internacional",
+          "Entrega en sitio del cliente",
+          "Trazabilidad de la carga en cada etapa",
+        ],
+      },
+      {
+        id: "aduana",
+        title: "Aduana",
+        description:
+          "Gestionamos el despacho aduanal, la documentación de importación definitiva y la liberación de mercancías en terminal fiscal y recinto aduanal.",
+        items: [
+          "Despacho y liberación aduanal",
+          "Trámite documental completo",
+          "Cartas de encomienda y cesión de derechos",
+        ],
+      },
+      {
+        id: "fiscal",
+        title: "Fiscal",
+        description:
+          "Aseguramos el cumplimiento fiscal de la operación: impuestos, derechos, aranceles e IVA conforme a la normatividad vigente.",
+        items: [
+          "Impuestos y derechos",
+          "Aranceles e IVA conforme a normatividad vigente",
+          "Cumplimiento normativo y criterios de autoridad",
+        ],
+      },
+      {
+        id: "finanzas",
+        title: "Finanzas",
+        description:
+          "Administramos el calendario de pagos, garantías, capital de trabajo y la estructura financiera óptima del proyecto conforme al contrato de mandato.",
+        items: [
+          "Calendario de pagos alineado al embarque",
+          "Garantías y depósitos en garantía",
+          "Gestión de capital de trabajo",
+        ],
+      },
     ],
 
-    // SectionProceso
     procesoLabel: "Proceso",
-    procesoTitle: "Cómo trabajamos",
+    procesoTitle: "De origen a entrega en sitio",
     procesoIntro:
-      "Búsqueda, adquisición, operación y crecimiento. Un proceso claro y predecible.",
+      "Metodología estructurada para la importación definitiva, transportación y entrega de equipos, con trazabilidad integral en logística, aduana y finanzas.",
     procesoSteps: [
       {
         step: "01",
-        title: "Búsqueda y filtrado",
-        text: "Identificamos empresas que encajan con nuestros criterios: rentabilidad, equipo y potencial de crecimiento.",
+        title: "Diagnóstico",
+        text: "Análisis detallado del proyecto y de los requerimientos operativos para definir el alcance de la importación.",
       },
       {
         step: "02",
-        title: "Acercamiento y confidencialidad",
-        text: "Contacto discreto con propietarios que han expresado interés en una transición. Respeto total a la confidencialidad.",
+        title: "Propuesta y mandato",
+        text: "Aceptación de la propuesta, firma del contrato de mandato e instrumentación documental para la importación definitiva.",
       },
       {
         step: "03",
-        title: "Due diligence y valoración",
-        text: "Análisis financiero, operativo y legal. Propuesta de valoración y estructura alineada con sus objetivos.",
+        title: "Origen y embarque",
+        text: "Coordinación desde fábrica, almacén y puerto de origen. Seguimiento de la carga hasta el arribo de la nave.",
       },
       {
         step: "04",
-        title: "Cierre y operación",
-        text: "Negociación clara, cierre ordenado. Nos incorporamos a la compañía de tiempo completo para operarla y hacerla crecer.",
+        title: "Despacho aduanal",
+        text: "Gestión en terminal aduanal: impuestos, derechos, garantías y liberación con información veraz y comprobable.",
+      },
+      {
+        step: "05",
+        title: "Entrega en sitio",
+        text: "Transporte en destino, maniobras de descarga y entrega en sitio. Cartas de encomienda y cesión de derechos cuando aplique.",
       },
     ],
 
-    // SectionEquipo
-    equipoLabel: "Equipo",
-    equipoTitle: "Socios Fundadores",
-    equipoIntro1:
-      "Denia Capital fue fundado por Pedro Garza y Pablo Lecuona con el objetivo de identificar empresas con potencial de crecimiento en las que invertir. Ambos cuentan con amplia experiencia profesional en diversas compañías Fortune 500, así como trayectoria empresarial, tanto en México como a nivel internacional.",
-    equipoIntro2:
-      "Adicionalmente Denia Capital cuenta con el respaldo de un grupo de inversionistas experimentados conformado por empresarios, inversionistas y ejecutivos con una amplia trayectoria.",
-    equipoRole: "Managing Partner",
-    equipoPedroBio: [
-      "Pedro Garza es un ejecutivo de estrategia y finanzas con amplia experiencia nacional e internacional liderando análisis y planificación financiera a gran escala, optimización de costos y operaciones en México, América Latina y Estados Unidos.",
-      " ",
-      "Cuenta con amplia trayectoria profesional en diferentes compañías y como empresario, desde consultoría estratégica y en compañias internacionales, gestionando presupuestos multinacionales y apoyando a la toma de decisiones a nivel ejecutivo para la alta dirección, junta directiva e inversionistas.",
-      " ",
-      "Pedro es MBA por IESE Business School y Licenciado en Finanzas por la Universidad Panamericana, cuenta con una especialidad en Finanzas por IE Business School y cursos ejecutivos de Estrategia y Liderazgo por Harvard Business School.",
-    ],
-    equipoPabloBio: [
-      "Pablo Lecuona es un ejecutivo de desarrollo comercial y operaciones corporativas con trayectoria internacional liderando cuentas globales de clientes, redes de distribuidores e iniciativas de expansión regional en México y América Latina.",
-      " ",
-      "Cuenta con amplia experiencia en ventas corporativas, desarollo de negocios y coordinación de equipos multifuncionales en áreas técnicas, financieras y comerciales para ejecutar estrategias complejas de expansión de mercado. De igual forma, cuenta con experiencia operativa en transacciones de inversión, incluyendo valoración de empresas y due diligence comercial.",
-      " ",
-      "Pablo es MBA por IESE Business School e Ingeniero Químico por la Universidad Nacional Autónoma de México con estudios en Yonsei University of Seoul.",
-    ],
-
-    // SectionInversionistas
-    inversionistasLabel: "Respaldo",
-    inversionistasTitle: "Inversionistas que respaldan el proyecto",
+    inversionistasLabel: "Por qué HTQ",
+    inversionistasTitle: "Nuestra filosofía de trabajo",
     inversionistasIntro:
-      "Nos respaldan inversionistas locales e internacionales: empresarios, fondos y ejecutivos con trayectoria en México que aportan no sólo capital, sino experiencia para identificar y operar un negocio en el largo plazo.",
+      "Conocemos los requerimientos que exige una operación de comercio exterior. Nuestro compromiso es atender cada uno con planeación, agilidad y claridad.",
     inversionistasPoints: [
-      "Capital comprometido por inversionistas dispuestos a ejecutar cuando encontremos la oportunidad adecuada.",
-      "No sólo recursos: mentoría y experiencia de empresarios y ejecutivos en México y el mundo.",
-      "Incentivos alineados con el vendedor y con el éxito a largo plazo del negocio.",
-      "Transparencia en el proceso, trato respetuoso y compromiso con preservar la cultura y visión de su negocio.",
+      {
+        id: "planeacion",
+        title: "Planeación",
+        description: "Anticipamos cada etapa de la operación para prevenir contratiempos e imprevistos.",
+      },
+      {
+        id: "agilidad",
+        title: "Agilidad",
+        description: "Respondemos con prontitud ante cambios y prioridades en su operación.",
+      },
+      {
+        id: "informacion",
+        title: "Información oportuna, veraz y comprobable",
+        description: "Proporcionamos en todo momento datos precisos y debidamente respaldados de su importación.",
+      },
+      {
+        id: "trazabilidad",
+        title: "Trazabilidad",
+        description: "Damos seguimiento a la carga y al avance documental en cada etapa del proceso.",
+      },
+      {
+        id: "claridad",
+        title: "Claridad",
+        description: "Presentamos estructuras de costo y calendarios transparentes, sin condiciones ambiguas.",
+      },
+      {
+        id: "retorno",
+        title: "Retorno de inversión",
+        description: "Optimizamos costos y tiempos para que su inversión genere valor desde el primer día.",
+      },
     ],
 
-    // SectionContacto
     contactoLabel: "Contacto",
-    contactoTitle: "Contacto",
+    contactoTitle: "Solicitar asesoría",
     contactoIntro:
-      "¿Estás pensando en vender tu negocio o conoce alguna empresa donde podamos sumar valor? Deja un mensaje; respondemos con discreción y sin compromiso.",
-    contactoConfidential: "Respondemos a todas las consultas de forma confidencial.",
+      "Si requiere importar una línea de producción, maquinaria o equipos especializados, le invitamos a compartir los detalles de su proyecto — origen, destino y alcance — para responderle con una propuesta clara y estructurada.",
+    contactoConfidential: "Toda la información compartida será tratada de forma estrictamente confidencial.",
+    contactoEmail: "contacto@htquality.com.mx",
+    contactoCoverage: "Importaciones con destino en toda la República Mexicana.",
+    contactoEmailLabel: "Correo electrónico",
+    contactoResponseLabel: "Propuesta formal",
+    contactoResponseText: "Cotización detallada con estructura de costos y calendario de pagos.",
+    contactoFormName: "Nombre",
+    contactoFormCompany: "Empresa",
+    contactoFormRfc: "RFC de la empresa",
+    contactoFormPhone: "Teléfono",
+    contactoFormMessage: "Mensaje",
+    contactoFormNamePlaceholder: "Nombre completo",
+    contactoFormCompanyPlaceholder: "Razón social o nombre comercial",
+    contactoFormRfcPlaceholder: "Ejemplo: ABC123456XYZ",
+    contactoFormPhonePlaceholder: "Ejemplo: +52 55 1234 5678",
+    contactoFormMessagePlaceholder: "Describa su proyecto: origen, destino, tipo de equipo, plazos estimados…",
+    contactoFormSubmit: "Enviar solicitud",
+    contactoFormSubmitting: "Enviando solicitud…",
+    contactoFormSuccess: "Gracias. Hemos recibido su solicitud y nos pondremos en contacto a la brevedad.",
+    contactoFormError: "No fue posible enviar su mensaje. Le solicitamos intentar nuevamente o escribirnos directamente.",
+    contactoFormRequired: "Este campo es obligatorio.",
 
-    // Footer
-    footerTagline: "Buscando seguir el legado de una gran empresa en México.",
+    footerTagline: "Apoyo especializado a empresas en sus operaciones de comercio exterior.",
+    footerCtaPrompt: "¿Tiene un proyecto de importación?",
     footerLinks: "Enlaces",
     footerContact: "Contacto",
     footerMexico: "México",
     footerRights: "Todos los derechos reservados.",
+    footerCompany: "HT Quality",
   },
   en: {
-    heroTagline: "Private Investment · Mexico",
-    heroTitle:
-      "Seeking established and high potential companies ready for a strategic transition",
+    heroTitleLine1: "Import of production lines and equipment",
+    heroTitleAccent: "from origin to Mexico",
     heroSubtitle:
-      "Our aspiration is to continue your legacy: invest, operate, and grow the company you've built, respecting its culture and maximizing its long term potential.",
-    ctaStartConversation: "Start conversation",
+      "Trading company with 24 years of experience in foreign trade management. We coordinate imports of machinery, materials and specialized equipment to the highest operational standards.",
+    ctaStartConversation: "Request advisory",
+    ctaExploreServices: "View services",
+    ctaContactNow: "Get in touch",
+    heroScrollLabel: "Scroll down",
 
     nav: {
       nosotros: "About us",
-      queBuscamos: "Focus",
+      servicios: "Services",
       proceso: "Process",
-      equipo: "Team",
-      respaldo: "Backing",
+      valor: "Why HTQ",
       contacto: "Contact",
     },
     ariaOpenMenu: "Open menu",
 
     nosotrosLabel: "About us",
-    nosotrosTitle: "One goal: acquire a company and dedicate ourselves to operating it",
+    nosotrosTitle: "Supporting companies in their foreign trade operations",
     nosotrosP1:
-      "Denia Capital is a private investment vehicle in Mexico. We are not a private equity fund and do not manage a portfolio: we seek to acquire a single company, take a majority stake, and dedicate ourselves full time to growing it on the foundation that has been built.",
+      "HT Quality is a trading company with 24 years of experience in foreign trade management for its clients. We began by supporting industrial companies with exports to China and Asia.",
     nosotrosP2:
-      "We offer an attractive and reliable exit alternative for the founder, through an orderly and planned transition that respects the business model, employees, customers and suppliers. We join the company full-time at the helm of the management team.",
+      "Over the past 12 years we have established commercial alliances with leading Mexican companies across their sectors, optimizing their foreign trade operations and enabling them to remain focused on their core business. Today we continue to support companies across industries that require our expertise in managing imports and exports of goods, materials and equipment.",
     nosotrosCards: [
-      "One business, our full focus",
-      "Orderly transition, culture preserved",
-      "Committed capital, ready to execute",
-      "Active operation, long-term vision",
+      "24 years of foreign trade experience",
+      "Alliances with leading companies in Mexico",
+      "End-to-end CIF import management",
+      "So you may remain focused on your core business",
     ],
 
-    vendedoresLabel: "Focus",
-    vendedoresTitle: "Company Profile",
+    vendedoresLabel: "Services",
+    vendedoresTitle: "Comprehensive import management",
     vendedoresIntro:
-      "We seek companies that are leaders in their industry or locality, with a track record of success and room to grow with dedicated capital and management.",
-    vendedoresBusinessTitle: "The business",
-    vendedoresBusinessItems: [
-      "Annual sales > 200 million MXN pesos",
-      "Demonstrated profitability - EBITDA > 15%",
-      "Customer base or recurring revenue",
-      "Sector with positive growth trends",
-      "Low capital expenditure (CAPEX) needs",
-      "Operational team that can continue",
-    ],
-    vendedoresOwnerTitle: "The owner",
-    vendedoresOwnerItems: [
-      "Open to a control transition",
-      "Who cares about their legacy and team",
-      "With clear motivations to sell",
-      "Aligned with our values of integrity and respect",
+      "Strategic advisory from project inception through completion, designed to ensure an efficient, orderly process free of delays.",
+    serviciosPillars: [
+      {
+        id: "logistica",
+        title: "Logistics",
+        description:
+          "We coordinate cargo movement from the factory and origin port through to on-site client delivery, with documented traceability at every stage.",
+        items: [
+          "International transport",
+          "On-site client delivery",
+          "Cargo traceability at every stage",
+        ],
+      },
+      {
+        id: "aduana",
+        title: "Customs",
+        description:
+          "We manage customs clearance, definitive import documentation and cargo release at the fiscal terminal and customs facility.",
+        items: [
+          "Customs clearance and release",
+          "Complete documentation handling",
+          "Mandate letters and rights assignment",
+        ],
+      },
+      {
+        id: "fiscal",
+        title: "Fiscal",
+        description:
+          "We ensure fiscal compliance for the operation: taxes, duties, tariffs and VAT in accordance with current regulations.",
+        items: [
+          "Taxes and duties",
+          "Tariffs and VAT per current regulations",
+          "Regulatory compliance and authority criteria",
+        ],
+      },
+      {
+        id: "finanzas",
+        title: "Finance",
+        description:
+          "We manage the payment schedule, guarantees, working capital and the optimal financial structure of the project under the mandate contract.",
+        items: [
+          "Payment schedule aligned to shipping milestones",
+          "Guarantees and security deposits",
+          "Working capital management",
+        ],
+      },
     ],
 
     procesoLabel: "Process",
-    procesoTitle: "Clear and Transparent",
+    procesoTitle: "From origin to on-site delivery",
     procesoIntro:
-      "Search, acquisition, operation and growth. A clear and predictable process.",
+      "A structured methodology for definitive import, transport and equipment delivery, with full traceability across logistics, customs and finance.",
     procesoSteps: [
       {
         step: "01",
-        title: "Search and filtering",
-        text: "We identify companies that fit our criteria: profitability, team and growth potential.",
+        title: "Assessment",
+        text: "Detailed analysis of the project and its operational requirements to define the scope of the import.",
       },
       {
         step: "02",
-        title: "Outreach and confidentiality",
-        text: "Discreet contact with owners who have expressed interest in a transition. Total respect for confidentiality.",
+        title: "Proposal and mandate",
+        text: "Proposal acceptance, mandate contract signing and documentation for definitive import.",
       },
       {
         step: "03",
-        title: "Due diligence and valuation",
-        text: "Financial, operational and legal analysis. Valuation proposal and structure aligned with their objectives.",
+        title: "Origin and shipping",
+        text: "Coordination from factory, warehouse and origin port. Cargo tracking through vessel arrival.",
       },
       {
         step: "04",
-        title: "Closing and operation",
-        text: "Clear negotiation, orderly closing. We join the company full-time to operate it and grow it.",
+        title: "Customs clearance",
+        text: "Management at customs terminal: taxes, duties, guarantees and release with accurate, verifiable information.",
+      },
+      {
+        step: "05",
+        title: "On-site delivery",
+        text: "Destination transport, unloading and on-site delivery. Mandate letters and rights assignment when applicable.",
       },
     ],
 
-    equipoLabel: "Team",
-    equipoTitle: "The Partners",
-    equipoIntro1:
-      "Denia Capital was founded by Pedro Garza and Pablo Lecuona with the goal of identifying companies with growth potential to invest in. Both have extensive professional experience in various Fortune 500 companies, as well as entrepreneurial track record, both in Mexico and internationally.",
-    equipoIntro2:
-      "Additionally, Denia Capital is backed by a group of experienced investors made up of entrepreneurs, investors and executives with extensive track records.",
-    equipoRole: "Managing Partner",
-    equipoPedroBio: [
-      "Pedro Garza is a strategy and finance executive with extensive national and international experience leading large-scale financial analysis and planning, cost optimization and operations in Mexico, Latin America and the United States.",
-      " ",
-      "He has extensive professional experience in different companies and as an entrepreneur, from strategic consulting and in international companies, managing multinational budgets and supporting executive decision-making for senior management, board of directors and investors.",
-      " ",
-      "Pedro holds an MBA from IESE Business School and a degree in Finance from Universidad Panamericana, with a specialization in Finance from IE Business School and executive courses in Strategy and Leadership from Harvard Business School.",
-    ],
-    equipoPabloBio: [
-      "Pablo Lecuona is a business development and corporate operations executive with international experience leading global customer accounts, distributor networks and regional expansion initiatives in Mexico and Latin America.",
-      " ",
-      "He has extensive experience in corporate sales, business development and coordination of multifunctional teams in technical, financial and commercial areas to execute complex market expansion strategies. He also has operational experience in investment transactions, including company valuation and commercial due diligence.",
-      " ",
-      "Pablo holds an MBA from IESE Business School and a Chemical Engineering degree from the National Autonomous University of Mexico, with studies at Yonsei University of Seoul.",
-    ],
-
-    inversionistasLabel: "Backing",
-    inversionistasTitle: "Investors backing the project",
+    inversionistasLabel: "Why HTQ",
+    inversionistasTitle: "Our work philosophy",
     inversionistasIntro:
-      "We are backed by local and international investors: entrepreneurs, funds and executives with track records in Mexico who contribute not only capital, but experience to identify and operate a business in the long term.",
+      "We understand the requirements that a foreign trade operation demands. Our commitment is to address each one with planning, agility and clarity.",
     inversionistasPoints: [
-      "Capital committed by investors willing to execute when we find the right opportunity.",
-      "Not just resources: mentorship and experience from entrepreneurs and executives in Mexico and around the world.",
-      "Incentives aligned with the seller and with the long-term success of the business.",
-      "Transparency in the process, respectful treatment and commitment to preserving the culture and vision of your business.",
+      {
+        id: "planeacion",
+        title: "Planning",
+        description: "We anticipate each stage of the operation to prevent delays and unforeseen events.",
+      },
+      {
+        id: "agilidad",
+        title: "Agility",
+        description: "We respond promptly to changes and priorities within your operation.",
+      },
+      {
+        id: "informacion",
+        title: "Timely, accurate and verifiable information",
+        description: "We provide precise, duly supported data regarding your import at every stage.",
+      },
+      {
+        id: "trazabilidad",
+        title: "Traceability",
+        description: "We monitor cargo and documentation progress at every stage of the process.",
+      },
+      {
+        id: "claridad",
+        title: "Clarity",
+        description: "We present transparent cost structures and timelines, with no ambiguous terms.",
+      },
+      {
+        id: "retorno",
+        title: "Return on investment",
+        description: "We optimize costs and timelines so that your investment generates value from day one.",
+      },
     ],
 
     contactoLabel: "Contact",
-    contactoTitle: "Contact",
+    contactoTitle: "Request advisory",
     contactoIntro:
-      "Send us a message if considering a strategic transition or know a company where we can deliver significant value. All engagements are conducted with the utmost discretion and without any commitments.",
-    contactoConfidential: "We respond to all inquiries confidentially.",
+      "If you require the import of a production line, machinery or specialized equipment, we invite you to share the details of your project — origin, destination and scope — so that we may respond with a clear, structured proposal.",
+    contactoConfidential: "All information shared will be treated in strict confidence.",
+    contactoEmail: "contacto@htquality.com.mx",
+    contactoCoverage: "Imports with destination anywhere in Mexico.",
+    contactoEmailLabel: "Email",
+    contactoResponseLabel: "Formal proposal",
+    contactoResponseText: "Detailed quote with cost structure and payment schedule.",
+    contactoFormName: "Name",
+    contactoFormCompany: "Company",
+    contactoFormRfc: "Company RFC",
+    contactoFormPhone: "Phone",
+    contactoFormMessage: "Message",
+    contactoFormNamePlaceholder: "Full name",
+    contactoFormCompanyPlaceholder: "Legal name or trade name",
+    contactoFormRfcPlaceholder: "Example: ABC123456XYZ",
+    contactoFormPhonePlaceholder: "Example: +52 55 1234 5678",
+    contactoFormMessagePlaceholder: "Please describe your project: origin, destination, equipment type, estimated timelines…",
+    contactoFormSubmit: "Submit request",
+    contactoFormSubmitting: "Submitting request…",
+    contactoFormSuccess: "Thank you. We have received your request and will contact you shortly.",
+    contactoFormError: "We were unable to send your message. Please try again or contact us directly.",
+    contactoFormRequired: "This field is required.",
 
-    footerTagline: "Seeking to continue the legacy of a great company in Mexico.",
+    footerTagline: "Specialized support for companies in their foreign trade operations.",
+    footerCtaPrompt: "Do you have an import project?",
     footerLinks: "Links",
     footerContact: "Contact",
     footerMexico: "Mexico",
     footerRights: "All rights reserved.",
+    footerCompany: "HT Quality",
   },
 } as const;
 

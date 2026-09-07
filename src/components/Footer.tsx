@@ -4,90 +4,60 @@ import Link from "next/link";
 import { useLocale } from "@/context/LocaleContext";
 
 export function Footer() {
-  const currentYear = new Date().getFullYear();
+  const year = new Date().getFullYear();
   const { t } = useLocale();
+
+  const links = [
+    { href: "#nosotros", label: t.nav.nosotros },
+    { href: "#servicios", label: t.nav.servicios },
+    { href: "#proceso", label: t.nav.proceso },
+    { href: "#valor", label: t.nav.valor },
+    { href: "#contacto", label: t.nav.contacto },
+  ] as const;
 
   return (
     <footer className="bg-navy text-white">
+      <div className="border-b border-white/10">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 py-12 flex flex-col sm:flex-row items-center justify-between gap-6 text-center sm:text-left">
+          <div>
+            <p className="text-white/70 text-sm">{t.footerCtaPrompt}</p>
+            <p className="mt-1 text-xl font-bold">{t.ctaStartConversation}</p>
+          </div>
+          <Link href="#contacto" className="btn-primary shrink-0">
+            {t.ctaContactNow}
+          </Link>
+        </div>
+      </div>
       <div className="max-w-6xl mx-auto px-4 sm:px-6 py-12 lg:py-16">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
           <div>
-            <Link href="/" className="inline-block h-6 lg:h-7">
-              <img
-                src="/images/Screenshot_2026-02-21_at_14.43.42-removebg-preview.png"
-                alt="Denia Capital"
-                className="h-6 w-auto object-contain object-left lg:h-7"
-              />
+            <Link href="/" className="text-xl font-bold text-white hover:text-sky transition-colors">
+              HT<span className="text-sky"> Quality</span>
             </Link>
-            <p className="mt-2 text-sm text-gray-light/80 max-w-xs">
-              {t.footerTagline}
-            </p>
+            <p className="mt-3 text-sm text-white/70 max-w-xs leading-relaxed">{t.footerTagline}</p>
           </div>
           <div>
-            <p className="text-sm font-medium text-gray-light mb-4">{t.footerLinks}</p>
-            <ul className="space-y-2">
-              <li>
-                <Link href="#nosotros" className="text-sm text-white/80 hover:text-white transition-colors">
-                  {t.nav.nosotros}
-                </Link>
-              </li>
-              <li>
-                <Link href="#vendedores" className="text-sm text-white/80 hover:text-white transition-colors">
-                  {t.nav.queBuscamos}
-                </Link>
-              </li>
-              <li>
-                <Link href="#proceso" className="text-sm text-white/80 hover:text-white transition-colors">
-                  {t.nav.proceso}
-                </Link>
-              </li>
-              <li>
-                <Link href="#equipo" className="text-sm text-white/80 hover:text-white transition-colors">
-                  {t.nav.equipo}
-                </Link>
-              </li>
-              <li>
-                <Link href="#modelo" className="text-sm text-white/80 hover:text-white transition-colors">
-                  {t.nav.respaldo}
-                </Link>
-              </li>
-              <li>
-                <Link href="#contacto" className="text-sm text-white/80 hover:text-white transition-colors">
-                  {t.nav.contacto}
-                </Link>
-              </li>
+            <p className="text-xs font-semibold uppercase tracking-widest text-white/50 mb-4">{t.footerLinks}</p>
+            <ul className="space-y-2.5">
+              {links.map(({ href, label }) => (
+                <li key={href}>
+                  <Link href={href} className="text-sm text-white/80 hover:text-sky transition-colors">
+                    {label}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
           <div>
-            <p className="text-sm font-medium text-gray-light mb-4">{t.footerContact}</p>
-            <p className="text-sm text-white/80 mb-3">{t.footerMexico}</p>
-            <div className="flex flex-col gap-4">
-              <div className="flex flex-col gap-1">
-                <a
-                  href="mailto:pedro.garza@denia-capital.com"
-                  className="text-sm text-white hover:text-gray-light transition-colors"
-                >
-                  pedro.garza@denia-capital.com
-                </a>
-                <a
-                  href="mailto:pablo@denia-capital.com"
-                  className="text-sm text-white hover:text-gray-light transition-colors"
-                >
-                  pablo@denia-capital.com
-                </a>
-              </div>
-              <a
-                href="tel:+525636040986"
-                className="text-sm text-white hover:text-gray-light transition-colors"
-              >
-                +52 56 3604 0986
-              </a>
-            </div>
+            <p className="text-xs font-semibold uppercase tracking-widest text-white/50 mb-4">{t.footerContact}</p>
+            <p className="text-sm text-white/80 mb-2">{t.footerMexico}</p>
+            <a href={`mailto:${t.contactoEmail}`} className="text-sm text-sky hover:text-white transition-colors font-medium">
+              {t.contactoEmail}
+            </a>
           </div>
-          
         </div>
-        <div className="mt-12 pt-8 border-t border-white/10 text-center text-sm text-white/60">
-          © {currentYear} Denia Capital Partners. {t.footerRights}
+        <div className="mt-12 pt-8 border-t border-white/10 text-center text-sm text-white/50">
+          © {year} {t.footerCompany}. {t.footerRights}
         </div>
       </div>
     </footer>

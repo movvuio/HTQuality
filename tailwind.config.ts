@@ -9,18 +9,17 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        primary: "#0229af",
-        navy: "#072535",
-        accent: "#f9943b",
-        sky: "#a7cce0",
+        primary: "#0d4f8b",
+        navy: "#0a1628",
+        accent: "#f59e0b",
+        sky: "#7dd3fc",
         gray: {
           mid: "#737373",
           light: "#d9d9d9",
         },
       },
       fontFamily: {
-        sans: ["var(--font-dm-sans)", "system-ui", "sans-serif"],
-        serif: ["var(--font-instrument-serif)", "Georgia", "serif"],
+        sans: ["var(--font-inter)", "Inter", "system-ui", "sans-serif"],
       },
     },
   },

@@ -1,88 +1,65 @@
 import type { Metadata } from "next";
-import { DM_Sans, Instrument_Serif } from "next/font/google";
+import { Inter } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Providers } from "@/components/Providers";
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://denia-capital.com";
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://htquality.com.mx";
 
-const dmSans = DM_Sans({
+const inter = Inter({
   subsets: ["latin"],
-  variable: "--font-dm-sans",
+  variable: "--font-inter",
   display: "swap",
-});
-
-const instrumentSerif = Instrument_Serif({
-  weight: "400",
-  subsets: ["latin"],
-  variable: "--font-instrument-serif",
-  display: "swap",
+  weight: ["400", "500", "600", "700", "800", "900"],
 });
 
 const siteDescription =
-  "Buscamos seguir el legado de una gran empresa en México. Inversión privada, adquisición y operación de empresas consolidadas con alto potencial.";
+  "HT Quality: 24 años de experiencia en la gestión de comercio exterior en México. Importación CIF de líneas de producción, maquinaria industrial y equipos especializados, de origen a entrega en sitio.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: "Denia Capital Partners | Inversión Privada en México",
-    template: "%s | Denia Capital Partners",
+    default: "HT Quality | Importación CIF de Maquinaria y Equipos Industriales",
+    template: "%s | HT Quality",
   },
   description: siteDescription,
   keywords: [
-    "inversión privada",
-    "México",
-    "adquisición de empresas",
-    "search fund",
-    "private equity",
-    "Denia Capital",
-    "transición empresarial",
+    "comercio exterior",
+    "importación maquinaria industrial",
+    "importación CIF",
+    "aduanas México",
+    "equipos especializados",
+    "HT Quality",
+    "logística internacional",
+    "líneas de producción",
   ],
-  authors: [{ name: "Denia Capital Partners" }],
-  creator: "Denia Capital Partners",
+  authors: [{ name: "HT Quality" }],
+  creator: "HT Quality",
   openGraph: {
     type: "website",
     locale: "es_MX",
     url: SITE_URL,
-    siteName: "Denia Capital Partners",
-    title: "Denia Capital Partners | Inversión Privada en México",
+    siteName: "HT Quality",
+    title: "HT Quality | Importación CIF de Maquinaria y Equipos Industriales",
     description: siteDescription,
-    images: [
-      {
-        url: "/images/og-image.png",
-        width: 1200,
-        height: 630,
-        alt: "Denia Capital Partners",
-      },
-    ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Denia Capital Partners | Inversión Privada en México",
+    title: "HT Quality | Importación CIF de Maquinaria y Equipos Industriales",
     description: siteDescription,
   },
-  robots: {
-    index: true,
-    follow: true,
-  },
-  alternates: {
-    canonical: "/",
-  },
-  icons: {
-    icon: "/icon.png",
-    apple: "/icon.png",
-  },
+  robots: { index: true, follow: true },
+  alternates: { canonical: "/" },
+  icons: { icon: "/icon.png", apple: "/icon.png" },
 };
 
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "Organization",
-  name: "Denia Capital Partners",
+  name: "HT Quality",
   url: SITE_URL,
-  logo: `${SITE_URL}/images/Screenshot_2026-02-21_at_14.37.13-removebg-preview.png`,
-  description:
-    "Vehículo de inversión privada en México. Buscamos adquirir una única compañía, tomar una participación mayoritaria y dedicarle tiempo completo para hacerla crecer.",
+  description: siteDescription,
   address: {
     "@type": "PostalAddress",
     addressCountry: "MX",
@@ -90,7 +67,7 @@ const jsonLd = {
   },
   contactPoint: {
     "@type": "ContactPoint",
-    email: "pedro.garza@denia-capital.com",
+    email: "contacto@htquality.com.mx",
     contactType: "business",
     availableLanguage: ["Spanish", "English"],
   },
@@ -98,14 +75,9 @@ const jsonLd = {
 
 export default function RootLayout({
   children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+}: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html
-      lang="es"
-      className={`${dmSans.variable} ${instrumentSerif.variable} scroll-smooth`}
-    >
+    <html lang="es" className={`${inter.variable} scroll-smooth`}>
       <body className="min-h-screen flex flex-col font-sans bg-white text-navy">
         <script
           type="application/ld+json"

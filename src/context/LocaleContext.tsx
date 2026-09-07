@@ -9,7 +9,7 @@ import {
 } from "react";
 import { translations, type Locale } from "@/i18n/translations";
 
-const LOCALE_KEY = "denia-locale";
+const LOCALE_KEY = "htq-locale";
 
 type LocaleContextType = {
   locale: Locale;
