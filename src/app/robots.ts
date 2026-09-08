@@ -1,6 +1,6 @@
 import type { MetadataRoute } from "next";
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://htquality.com.mx";
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.htqmexico.com";
 
 export default function robots(): MetadataRoute.Robots {
   return {

@@ -7,6 +7,11 @@
   --navy: #0a1628;
   --gray-mid: #737373;
   --gray-light: #d9d9d9;
+  --header-height: 5.5rem;
+}
+
+html {
+  scroll-padding-top: var(--header-height);
 }
 
 body {

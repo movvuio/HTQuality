@@ -5,7 +5,7 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Providers } from "@/components/Providers";
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://htquality.com.mx";
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.htqmexico.com";
 
 const inter = Inter({
   subsets: ["latin"],
