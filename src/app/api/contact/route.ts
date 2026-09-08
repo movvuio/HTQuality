@@ -73,9 +73,10 @@ export async function POST(request: Request) {
   }
 
   const { name, company, email, rfc, phone, message } = validation.data;
-  const toEmail = process.env.CONTACT_TO_EMAIL ?? "contacto@htquality.com.mx";
-  const apiKey = process.env.RESEND_API_KEY;
-  const fromEmail = process.env.CONTACT_FROM_EMAIL ?? "HT Quality <onboarding@resend.dev>";
+  const toEmail = process.env.CONTACT_TO_EMAIL?.trim() ?? "contacto@htquality.com.mx";
+  const apiKey = process.env.RESEND_API_KEY?.trim();
+  const fromEmail =
+    process.env.CONTACT_FROM_EMAIL?.trim() ?? "HT Quality <contacto@htqmexico.com>";
 
   const subject = `Nueva solicitud de asesoría — ${company}`;
   const html = `
