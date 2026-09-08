@@ -9,8 +9,11 @@ type ContactPayload = {
   message: string;
 };
 
-const RFC_PATTERN = /^[A-ZÑ&]{3,4}\d{6}[A-Z0-9]{3}$/i;
 const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+function asOptionalString(value: unknown): string {
+  return typeof value === "string" ? value.trim() : "";
+}
 
 function validatePayload(body: unknown): { ok: true; data: ContactPayload } | { ok: false; error: string } {
   if (!body || typeof body !== "object") {
@@ -19,34 +22,19 @@ function validatePayload(body: unknown): { ok: true; data: ContactPayload } | { 
 
   const { name, company, email, rfc, phone, message } = body as Record<string, unknown>;
 
-  if (typeof name !== "string" || name.trim().length < 2) {
-    return { ok: false, error: "Name is required." };
-  }
-  if (typeof company !== "string" || company.trim().length < 2) {
-    return { ok: false, error: "Company is required." };
-  }
   if (typeof email !== "string" || !EMAIL_PATTERN.test(email.trim())) {
     return { ok: false, error: "Invalid email format." };
-  }
-  if (typeof rfc !== "string" || !RFC_PATTERN.test(rfc.trim())) {
-    return { ok: false, error: "Invalid RFC format." };
-  }
-  if (typeof phone !== "string" || phone.trim().length < 7) {
-    return { ok: false, error: "Phone is required." };
-  }
-  if (typeof message !== "string" || message.trim().length < 10) {
-    return { ok: false, error: "Message is required." };
   }
 
   return {
     ok: true,
     data: {
-      name: name.trim(),
-      company: company.trim(),
+      name: asOptionalString(name),
+      company: asOptionalString(company),
       email: email.trim().toLowerCase(),
-      rfc: rfc.trim().toUpperCase(),
-      phone: phone.trim(),
-      message: message.trim(),
+      rfc: asOptionalString(rfc),
+      phone: asOptionalString(phone),
+      message: asOptionalString(message),
     },
   };
 }
@@ -78,7 +66,7 @@ export async function POST(request: Request) {
   const fromEmail =
     process.env.CONTACT_FROM_EMAIL?.trim() ?? "HT Quality <contacto@htqmexico.com>";
 
-  const subject = `Nueva solicitud de asesoría — ${company}`;
+  const subject = `Nueva solicitud de asesoría — ${company || name || email}`;
   const html = `
     <h2>Nueva solicitud de asesoría</h2>
     <p><strong>Nombre:</strong> ${escapeHtml(name)}</p>

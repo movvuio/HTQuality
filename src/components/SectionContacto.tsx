@@ -41,12 +41,7 @@ export function SectionContacto() {
 
   const validateClient = () => {
     const next: Partial<Record<keyof FormFields, string>> = {};
-    if (form.name.trim().length < 2) next.name = t.contactoFormRequired;
-    if (form.company.trim().length < 2) next.company = t.contactoFormRequired;
     if (!EMAIL_PATTERN.test(form.email.trim())) next.email = t.contactoFormEmailInvalid;
-    if (!/^[A-ZÑ&]{3,4}\d{6}[A-Z0-9]{3}$/i.test(form.rfc.trim())) next.rfc = t.contactoFormRequired;
-    if (form.phone.trim().length < 7) next.phone = t.contactoFormRequired;
-    if (form.message.trim().length < 10) next.message = t.contactoFormRequired;
     setErrors(next);
     return Object.keys(next).length === 0;
   };
@@ -99,9 +94,8 @@ export function SectionContacto() {
                   value={form.name}
                   onChange={(e) => updateField("name", e.target.value)}
                   placeholder={t.contactoFormNamePlaceholder}
-                  className={`form-input${errors.name ? " form-input-error" : ""}`}
+                  className="form-input"
                 />
-                {errors.name && <p className="mt-1 text-xs text-red-500">{errors.name}</p>}
               </div>
               <div>
                 <label htmlFor="contact-company" className="form-label">
@@ -114,9 +108,8 @@ export function SectionContacto() {
                   value={form.company}
                   onChange={(e) => updateField("company", e.target.value)}
                   placeholder={t.contactoFormCompanyPlaceholder}
-                  className={`form-input${errors.company ? " form-input-error" : ""}`}
+                  className="form-input"
                 />
-                {errors.company && <p className="mt-1 text-xs text-red-500">{errors.company}</p>}
               </div>
             </div>
 
@@ -128,6 +121,7 @@ export function SectionContacto() {
                 id="contact-email"
                 type="email"
                 autoComplete="email"
+                required
                 value={form.email}
                 onChange={(e) => updateField("email", e.target.value)}
                 placeholder={t.contactoFormEmailPlaceholder}
@@ -145,12 +139,10 @@ export function SectionContacto() {
                   id="contact-rfc"
                   type="text"
                   value={form.rfc}
-                  onChange={(e) => updateField("rfc", e.target.value.toUpperCase())}
+                  onChange={(e) => updateField("rfc", e.target.value)}
                   placeholder={t.contactoFormRfcPlaceholder}
-                  className={`form-input uppercase${errors.rfc ? " form-input-error" : ""}`}
-                  maxLength={13}
+                  className="form-input"
                 />
-                {errors.rfc && <p className="mt-1 text-xs text-red-500">{errors.rfc}</p>}
               </div>
               <div>
                 <label htmlFor="contact-phone" className="form-label">
@@ -163,9 +155,8 @@ export function SectionContacto() {
                   value={form.phone}
                   onChange={(e) => updateField("phone", e.target.value)}
                   placeholder={t.contactoFormPhonePlaceholder}
-                  className={`form-input${errors.phone ? " form-input-error" : ""}`}
+                  className="form-input"
                 />
-                {errors.phone && <p className="mt-1 text-xs text-red-500">{errors.phone}</p>}
               </div>
             </div>
 
@@ -179,9 +170,8 @@ export function SectionContacto() {
                 value={form.message}
                 onChange={(e) => updateField("message", e.target.value)}
                 placeholder={t.contactoFormMessagePlaceholder}
-                className={`form-input resize-y min-h-[120px]${errors.message ? " form-input-error" : ""}`}
+                className="form-input resize-y min-h-[120px]"
               />
-              {errors.message && <p className="mt-1 text-xs text-red-500">{errors.message}</p>}
             </div>
 
             <div className="flex flex-col items-center gap-3 pt-1">

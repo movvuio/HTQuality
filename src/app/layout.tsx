@@ -51,7 +51,7 @@ export const metadata: Metadata = {
   },
   robots: { index: true, follow: true },
   alternates: { canonical: "/" },
-  icons: { icon: "/icon.png", apple: "/icon.png" },
+  icons: { icon: "/favicon.jpg", apple: "/icon.jpg" },
 };
 
 const jsonLd = {
