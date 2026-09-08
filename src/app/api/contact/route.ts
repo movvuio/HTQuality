@@ -3,25 +3,30 @@ import { NextResponse } from "next/server";
 type ContactPayload = {
   name: string;
   company: string;
+  email: string;
   rfc: string;
   phone: string;
   message: string;
 };
 
 const RFC_PATTERN = /^[A-ZÑ&]{3,4}\d{6}[A-Z0-9]{3}$/i;
+const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 function validatePayload(body: unknown): { ok: true; data: ContactPayload } | { ok: false; error: string } {
   if (!body || typeof body !== "object") {
     return { ok: false, error: "Invalid request body." };
   }
 
-  const { name, company, rfc, phone, message } = body as Record<string, unknown>;
+  const { name, company, email, rfc, phone, message } = body as Record<string, unknown>;
 
   if (typeof name !== "string" || name.trim().length < 2) {
     return { ok: false, error: "Name is required." };
   }
   if (typeof company !== "string" || company.trim().length < 2) {
     return { ok: false, error: "Company is required." };
+  }
+  if (typeof email !== "string" || !EMAIL_PATTERN.test(email.trim())) {
+    return { ok: false, error: "Invalid email format." };
   }
   if (typeof rfc !== "string" || !RFC_PATTERN.test(rfc.trim())) {
     return { ok: false, error: "Invalid RFC format." };
@@ -38,6 +43,7 @@ function validatePayload(body: unknown): { ok: true; data: ContactPayload } | { 
     data: {
       name: name.trim(),
       company: company.trim(),
+      email: email.trim().toLowerCase(),
       rfc: rfc.trim().toUpperCase(),
       phone: phone.trim(),
       message: message.trim(),
@@ -66,16 +72,17 @@ export async function POST(request: Request) {
     return NextResponse.json({ error: validation.error }, { status: 400 });
   }
 
-  const { name, company, rfc, phone, message } = validation.data;
+  const { name, company, email, rfc, phone, message } = validation.data;
   const toEmail = process.env.CONTACT_TO_EMAIL ?? "contacto@htquality.com.mx";
   const apiKey = process.env.RESEND_API_KEY;
   const fromEmail = process.env.CONTACT_FROM_EMAIL ?? "HT Quality <onboarding@resend.dev>";
 
-  const subject = `Nueva solicitud de cotización — ${company}`;
+  const subject = `Nueva solicitud de asesoría — ${company}`;
   const html = `
-    <h2>Nueva solicitud de cotización</h2>
+    <h2>Nueva solicitud de asesoría</h2>
     <p><strong>Nombre:</strong> ${escapeHtml(name)}</p>
     <p><strong>Empresa:</strong> ${escapeHtml(company)}</p>
+    <p><strong>Correo:</strong> ${escapeHtml(email)}</p>
     <p><strong>RFC:</strong> ${escapeHtml(rfc)}</p>
     <p><strong>Teléfono:</strong> ${escapeHtml(phone)}</p>
     <p><strong>Mensaje:</strong></p>
@@ -99,7 +106,7 @@ export async function POST(request: Request) {
     body: JSON.stringify({
       from: fromEmail,
       to: [toEmail],
-      reply_to: toEmail,
+      reply_to: email,
       subject,
       html,
     }),

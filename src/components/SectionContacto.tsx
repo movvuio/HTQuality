@@ -7,6 +7,7 @@ import { SectionHeader } from "@/components/SectionHeader";
 type FormFields = {
   name: string;
   company: string;
+  email: string;
   rfc: string;
   phone: string;
   message: string;
@@ -17,10 +18,13 @@ type FormStatus = "idle" | "submitting" | "success" | "error";
 const emptyForm: FormFields = {
   name: "",
   company: "",
+  email: "",
   rfc: "",
   phone: "",
   message: "",
 };
+
+const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 export function SectionContacto() {
   const { t } = useLocale();
@@ -39,6 +43,7 @@ export function SectionContacto() {
     const next: Partial<Record<keyof FormFields, string>> = {};
     if (form.name.trim().length < 2) next.name = t.contactoFormRequired;
     if (form.company.trim().length < 2) next.company = t.contactoFormRequired;
+    if (!EMAIL_PATTERN.test(form.email.trim())) next.email = t.contactoFormEmailInvalid;
     if (!/^[A-ZÑ&]{3,4}\d{6}[A-Z0-9]{3}$/i.test(form.rfc.trim())) next.rfc = t.contactoFormRequired;
     if (form.phone.trim().length < 7) next.phone = t.contactoFormRequired;
     if (form.message.trim().length < 10) next.message = t.contactoFormRequired;
@@ -59,6 +64,7 @@ export function SectionContacto() {
         body: JSON.stringify({
           name: form.name.trim(),
           company: form.company.trim(),
+          email: form.email.trim(),
           rfc: form.rfc.trim(),
           phone: form.phone.trim(),
           message: form.message.trim(),
@@ -112,6 +118,22 @@ export function SectionContacto() {
                 />
                 {errors.company && <p className="mt-1 text-xs text-red-500">{errors.company}</p>}
               </div>
+            </div>
+
+            <div>
+              <label htmlFor="contact-email" className="form-label">
+                {t.contactoFormEmail}
+              </label>
+              <input
+                id="contact-email"
+                type="email"
+                autoComplete="email"
+                value={form.email}
+                onChange={(e) => updateField("email", e.target.value)}
+                placeholder={t.contactoFormEmailPlaceholder}
+                className={`form-input${errors.email ? " form-input-error" : ""}`}
+              />
+              {errors.email && <p className="mt-1 text-xs text-red-500">{errors.email}</p>}
             </div>
 
             <div className="grid sm:grid-cols-2 gap-5">
