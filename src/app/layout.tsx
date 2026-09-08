@@ -15,12 +15,12 @@ const inter = Inter({
 });
 
 const siteDescription =
-  "HT Quality: 24 años de experiencia en la gestión de comercio exterior en México. Importación CIF de líneas de producción, maquinaria industrial y equipos especializados, de origen a entrega en sitio.";
+  "HT Quality: 24 años de experiencia en la gestión de comercio exterior en México. Importación de líneas de producción, maquinaria industrial y equipos especializados, de origen a entrega en México.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: "HT Quality | Importación CIF de Maquinaria y Equipos Industriales",
+    default: "HT Quality | Importación de Maquinaria y Equipos Industriales",
     template: "%s | HT Quality",
   },
   description: siteDescription,
@@ -41,12 +41,12 @@ export const metadata: Metadata = {
     locale: "es_MX",
     url: SITE_URL,
     siteName: "HT Quality",
-    title: "HT Quality | Importación CIF de Maquinaria y Equipos Industriales",
+    title: "HT Quality | Importación de Maquinaria y Equipos Industriales",
     description: siteDescription,
   },
   twitter: {
     card: "summary_large_image",
-    title: "HT Quality | Importación CIF de Maquinaria y Equipos Industriales",
+    title: "HT Quality | Importación de Maquinaria y Equipos Industriales",
     description: siteDescription,
   },
   robots: { index: true, follow: true },
