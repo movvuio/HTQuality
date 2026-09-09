@@ -36,6 +36,10 @@ html {
   scroll-padding-top: var(--header-height);
 }
 
+html[data-header-scrolled="true"] {
+  scroll-padding-top: var(--header-height-scrolled);
+}
+
 body {
   @apply bg-white text-navy antialiased;
 }

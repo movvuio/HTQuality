@@ -35,7 +35,7 @@ export function Hero() {
   };
 
   return (
-    <section className="relative h-screen min-h-[600px] flex items-start overflow-hidden bg-navy">
+    <section className="relative h-screen min-h-[600px] flex flex-col overflow-hidden bg-navy">
       <video
         ref={videoRef}
         src={HERO_VIDEOS[currentIndex]}
@@ -50,25 +50,27 @@ export function Hero() {
       <div className="absolute inset-0 z-[1] bg-navy/60" aria-hidden />
       <div className="absolute inset-0 z-[1] bg-gradient-to-b from-navy/50 via-transparent to-navy/75 pointer-events-none" aria-hidden />
 
-      <div className="relative z-10 w-full max-w-6xl mx-auto px-4 sm:px-6 pt-[calc(var(--header-height)+1.25rem)] pb-20 sm:pt-[calc(var(--header-height)+2rem)] sm:pb-24 lg:pt-[calc(var(--header-height)+3rem)]">
-        <div className="max-w-3xl">
-          <h1 className="text-3xl sm:text-5xl lg:text-[3.75rem] font-black leading-[1.1] text-white tracking-tight">
-            {t.heroTitleLine1}{" "}
-            <span className="text-sky">{t.heroTitleAccent}</span>
-          </h1>
-          <p className="mt-6 text-lg sm:text-xl text-white/80 max-w-2xl leading-relaxed">
-            {t.heroSubtitle}
-          </p>
-          <div className="mt-10 flex flex-wrap gap-4">
-            <Link href="#servicios" className="btn-primary">
-              {t.ctaExploreServices}
-            </Link>
-            <Link
-              href="#contacto"
-              className="inline-flex items-center px-6 py-3 rounded-lg bg-white/10 backdrop-blur-sm border border-white/30 text-white font-semibold hover:bg-white/20 transition-colors"
-            >
-              {t.ctaContactNow}
-            </Link>
+      <div className="relative z-10 flex flex-1 flex-col min-h-0 pt-[var(--header-height)] pb-20 sm:pb-24">
+        <div className="flex flex-1 items-center w-full max-w-6xl mx-auto px-4 sm:px-6">
+          <div className="max-w-3xl">
+            <h1 className="text-3xl sm:text-5xl lg:text-[3.75rem] font-black leading-[1.1] text-white tracking-tight">
+              {t.heroTitleLine1}{" "}
+              <span className="text-sky">{t.heroTitleAccent}</span>
+            </h1>
+            <p className="mt-6 text-lg sm:text-xl text-white/80 max-w-2xl leading-relaxed">
+              {t.heroSubtitle}
+            </p>
+            <div className="mt-10 flex flex-wrap gap-4">
+              <Link href="#servicios" className="btn-primary">
+                {t.ctaExploreServices}
+              </Link>
+              <Link
+                href="#contacto"
+                className="inline-flex items-center px-6 py-3 rounded-lg bg-white/10 backdrop-blur-sm border border-white/30 text-white font-semibold hover:bg-white/20 transition-colors"
+              >
+                {t.ctaContactNow}
+              </Link>
+            </div>
           </div>
         </div>
       </div>

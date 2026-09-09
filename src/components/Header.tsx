@@ -13,14 +13,6 @@ const navItems = [
   { key: "contacto" as const, href: "#contacto" },
 ];
 
-function applyHeaderHeight(scrolled: boolean) {
-  const styles = getComputedStyle(document.documentElement);
-  const height = scrolled
-    ? styles.getPropertyValue("--header-height-scrolled").trim()
-    : styles.getPropertyValue("--header-height").trim();
-  document.documentElement.style.setProperty("--header-height", height);
-}
-
 export function Header() {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -34,10 +26,10 @@ export function Header() {
   }, []);
 
   useEffect(() => {
-    const onResize = () => applyHeaderHeight(scrolled);
-    applyHeaderHeight(scrolled);
-    window.addEventListener("resize", onResize);
-    return () => window.removeEventListener("resize", onResize);
+    document.documentElement.dataset.headerScrolled = scrolled ? "true" : "false";
+    return () => {
+      delete document.documentElement.dataset.headerScrolled;
+    };
   }, [scrolled]);
 
   const isLight = scrolled;
