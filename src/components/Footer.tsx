@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { useLocale } from "@/context/LocaleContext";
 
@@ -30,11 +31,17 @@ export function Footer() {
       </div>
       <div className="max-w-6xl mx-auto px-4 sm:px-6 py-12 lg:py-16">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
-          <div>
-            <Link href="/" className="text-xl font-bold text-white hover:text-sky transition-colors">
-              HT<span className="text-sky"> Quality</span>
+          <div className="flex flex-col items-center md:items-start text-center md:text-left">
+            <Link href="/" aria-label="HT Quality de México" className="inline-block leading-none">
+              <Image
+                src="/logo.png"
+                alt="HT Quality de México"
+                width={517}
+                height={483}
+                className="logo-image h-[var(--header-logo-height)]"
+              />
             </Link>
-            <p className="mt-3 text-sm text-white/70 max-w-xs leading-relaxed">{t.footerTagline}</p>
+            <p className="mt-4 text-sm text-white/70 max-w-xs leading-relaxed">{t.footerTagline}</p>
           </div>
           <div>
             <p className="text-xs font-semibold uppercase tracking-widest text-white/50 mb-4">{t.footerLinks}</p>

@@ -7,7 +7,29 @@
   --navy: #0a1628;
   --gray-mid: #737373;
   --gray-light: #d9d9d9;
-  --header-height: 5.5rem;
+  /* Header + logo (mobile-first) */
+  --header-height: 8rem;
+  --header-height-scrolled: 5rem;
+  --header-logo-height: 5rem;
+  --header-logo-height-scrolled: 3rem;
+}
+
+@media (min-width: 640px) {
+  :root {
+    --header-height: 9.25rem;
+    --header-height-scrolled: 5.25rem;
+    --header-logo-height: 6.25rem;
+    --header-logo-height-scrolled: 3.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  :root {
+    --header-height: 10.75rem;
+    --header-height-scrolled: 6rem;
+    --header-logo-height: 8.65rem;
+    --header-logo-height-scrolled: 4.5rem;
+  }
 }
 
 html {
@@ -73,5 +95,17 @@ body {
 
   .form-input-error {
     @apply border-red-400 focus:border-red-400 focus:ring-red-400/20;
+  }
+
+  .logo-image {
+    width: auto;
+    max-width: 42vw;
+    filter: brightness(1.25) contrast(1.05) saturate(1.1) drop-shadow(0 0 7px rgba(255, 255, 255, 0.35));
+  }
+
+  @media (min-width: 640px) {
+    .logo-image {
+      max-width: none;
+    }
   }
 }

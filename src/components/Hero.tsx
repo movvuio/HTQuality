@@ -35,7 +35,7 @@ export function Hero() {
   };
 
   return (
-    <section className="relative h-screen min-h-[600px] flex items-center justify-center overflow-hidden bg-navy">
+    <section className="relative h-screen min-h-[600px] flex items-start overflow-hidden bg-navy">
       <video
         ref={videoRef}
         src={HERO_VIDEOS[currentIndex]}
@@ -50,9 +50,9 @@ export function Hero() {
       <div className="absolute inset-0 z-[1] bg-navy/60" aria-hidden />
       <div className="absolute inset-0 z-[1] bg-gradient-to-b from-navy/50 via-transparent to-navy/75 pointer-events-none" aria-hidden />
 
-      <div className="relative z-10 w-full max-w-6xl mx-auto px-4 sm:px-6 py-24">
+      <div className="relative z-10 w-full max-w-6xl mx-auto px-4 sm:px-6 pt-[calc(var(--header-height)+1.25rem)] pb-20 sm:pt-[calc(var(--header-height)+2rem)] sm:pb-24 lg:pt-[calc(var(--header-height)+3rem)]">
         <div className="max-w-3xl">
-          <h1 className="text-4xl sm:text-5xl lg:text-[3.75rem] font-black leading-[1.1] text-white tracking-tight">
+          <h1 className="text-3xl sm:text-5xl lg:text-[3.75rem] font-black leading-[1.1] text-white tracking-tight">
             {t.heroTitleLine1}{" "}
             <span className="text-sky">{t.heroTitleAccent}</span>
           </h1>
